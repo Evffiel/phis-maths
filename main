@@ -1,0 +1,51 @@
+from mine import Fraction, TemperatureConventer, MetricToEnglishConverter
+def main():
+    fract1 = Fraction(1, 2)
+    fract2 = Fraction(3, 4)
+
+    fract1.display()
+    fract2.display()
+
+    result_add = fract1.add(fract2)
+    result_subtract = fract1.add(fract2)
+    result_multiply = fract1.add(fract2)
+    result_divide = fract1.add(fract2)
+
+    print('Addition result:')
+    result_add.display()
+
+    print('Subtraction result:')
+    result_subtract.display()
+
+    print('Multiplication result:')
+    result_multiply.display()
+
+    print('Division result:')
+    result_divide.display()
+
+    celsius = 25
+    fahrenheit = TemperatureConventer.from_celsius_to_fahrenheit(celsius)
+    print(f'{celsius}°C is {fahrenheit}°F')
+
+    fahrenheit = 77
+    celsius = TemperatureConventer.from_fahrenheit_to_celsius(fahrenheit)
+    print(f'{fahrenheit}°F is {celsius}°C')
+
+    kilometers = 10
+    miles = MetricToEnglishConverter.kilometers_to_miles(kilometers)
+    print(f'{kilometers}km is {miles}m')
+
+    miles = 6.2
+    kilometers = MetricToEnglishConverter.miles_to_kilometers(miles)
+    print(f'{miles}m is {kilometers}km')
+
+    gallons = 5
+    liters =MetricToEnglishConverter.gallons_to_liters(gallons)
+    print(f'{gallons}gallons is {liters}liters')
+
+    liters = 20
+    gallons = MetricToEnglishConverter.liters_to_gallons(liters)
+    print(f'{liters}liters is {gallons}gallons')
+
+if __name__ == '__main__':
+    main()
